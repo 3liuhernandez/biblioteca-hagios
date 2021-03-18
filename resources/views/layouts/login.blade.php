@@ -22,12 +22,7 @@
 <body>
     <div id="app">
         @include('includes.navbar')
-        <div class="jumbotron text-center" style="margin-bottom:0">
-            <h1>@yield('title_section')</h1>
-            {{--  <p>Resize this responsive page to see the effect!</p>  --}}
-        </div>
-        <main class="py-6" id="contenet">
-            @include('includes.navbar_categories')
+        <main class="py-4">
             @yield('content')
         </main>
     </div>
