@@ -17,3 +17,8 @@ Route::get('/', 'GuestController@index');
 Auth::routes();
 
 Route::get('/home', 'GuestController@index')->name('home');
+
+
+
+/*admin*/
+route::get('/admin/', 'AdminController@index')->name('admin.home');
