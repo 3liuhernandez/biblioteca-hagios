@@ -53,10 +53,21 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        if ( Auth::User()->role == 0 ) {
-            $url = '/admin/';
-        } else {
-            $url = '/home';
+        $role = '';
+        $url = '';
+
+        $role = Auth()->user()->role;
+
+        switch ($role) {
+            case '0':
+                $url = '/admin/';
+                break;
+            case '1':
+                $url = '/home';
+                break;
+            default:
+                $url = '/home';
+                break;
         }
 
         $credentials = $request->only('email', 'password');

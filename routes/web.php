@@ -22,3 +22,9 @@ Route::get('/home', 'GuestController@index')->name('home');
 
 /*admin*/
 route::get('/admin/', 'AdminController@index')->name('admin.home');
+
+/* categories */
+route::get('/admin/categories/create', 'CategoryController@create')->name('category.create');
+route::post('/admin/categories/', 'CategoryController@store')->name('category.store');
+
+route::get('/admin/categories/index', 'CategoryController@index')->name('category.index');

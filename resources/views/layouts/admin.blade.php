@@ -22,8 +22,15 @@
 <body>
     <div id="app">
         @include('includes.navbar')
-        <main class="py-4">
-            @yield('content')
+        <main class="py-4 d-flex">
+            <div class="col-md-3 col-lg-2 col-sm-2 hidden-xs bg-dark d-flex flex-wrap">
+                <h2>@yield('section_name')</h2>
+                @include('includes.admin.sidenav')
+                <hr class="d-md-none">
+            </div>
+            <div class="col-md-9 col-lg-10 col-12 col-sm-10 col-12d-flex flex-wrap align-items-center">
+                @yield('content')
+            </div>
         </main>
     </div>
 </body>

@@ -1,14 +1,43 @@
-<ul class="nav bg-dark d-flex flex-column align-content-center admin_menu">
-    <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+<ul class="nav d-flex flex-column admin_menu">
+    <li class="nav-item" id="li_categories">
+        <a class="nav-link" href="{{ route('admin.home') }}"> Home </a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+    <!-- Dropdown -->
+    <li class="nav-item" id="li_categories">
+        <a style="display: inline-block" class="nav-link dropdown" href="#">
+            Categories
+        </a>
+        <a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{ route('category.create') }}">Create</a>
+            <a class="dropdown-item" href="{{ route('category.index') }}">List all</a>
+        </div>
+
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+    <!-- Dropdown -->
+    <li class="nav-item" id="li_books">
+        <a style="display: inline-block" class="nav-link dropdown" href="#">
+            Books
+        </a>
+        <a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Upload</a>
+            <a class="dropdown-item" href="#">List all</a>
+        </div>
+
     </li>
-    <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+
+    <!-- Dropdown -->
+    <li class="nav-item" id="li_students">
+        <a style="display: inline-block" class="nav-link dropdown" href="#">
+            Students
+        </a>
+        <a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Register</a>
+            <a class="dropdown-item" href="#">List all</a>
+        </div>
+
     </li>
+
 </ul>
