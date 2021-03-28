@@ -55,8 +55,7 @@ class LoginController extends Controller
     {
         $role = '';
         $url = '';
-
-        $role = Auth()->user()->role;
+        $role = $user->role;
 
         switch ($role) {
             case '0':

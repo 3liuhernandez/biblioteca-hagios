@@ -4,7 +4,7 @@
     </li>
     <!-- Dropdown -->
     <li class="nav-item" id="li_categories">
-        <a style="display: inline-block" class="nav-link dropdown" href="#">
+        <a style="display: inline-block" class="nav-link dropdown" href="{{ route('category.index') }}">
             Categories
         </a>
         <a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
