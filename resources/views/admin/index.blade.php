@@ -30,8 +30,8 @@
         <div class="d-flex flex-column mt-4">
             <h1 class="bg-primary"> Users </h1>
             <div class="container-fluid d-flex flex-wrap">
-                <h3 class="bg-secondary"> Stundents </h3>
-                <table class="table table-bordered table-hover table-responsive">
+                <h3 class=""> Stundents </h3>
+                <table class="table table-bordered table-hover table-responsive small">
                     <thead>
                         <th>ID</th>
                         <th>Name</th>
@@ -60,8 +60,8 @@
             </div>
 
             <div class="container-fluid d-flex flex-wrap">
-                <h3 class="bg-secondary"> Admins </h3>
-                <table class="table table-bordered table-hover table-dark table-responsive">
+                <h3 class=""> Admins </h3>
+                <table class="table table-bordered table-hover table-dark table-responsive small">
                     <thead>
                         <th>ID</th>
                         <th>Name</th>

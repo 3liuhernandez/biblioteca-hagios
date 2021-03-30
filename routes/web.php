@@ -27,3 +27,11 @@ route::get('/admin/', 'AdminController@index')->name('admin.home');
 route::get('/admin/categories/', 'CategoryController@index')->name('category.index');
 route::get('/admin/categories/create', 'CategoryController@create')->name('category.create');
 route::post('/admin/categories/', 'CategoryController@store')->name('category.store');
+
+/* subcategory */
+route::post('/admin/sub-categories/', 'SubCategoryController@store')->name('subcategory.store');
+
+
+/* Book */
+route::get('/admin/book/create', 'BookController@create')->name('book.create');
+route::post('/admin/book/', 'BookController@store')->name('book.store');

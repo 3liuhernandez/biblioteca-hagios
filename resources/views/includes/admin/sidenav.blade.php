@@ -21,7 +21,7 @@
         </a>
         <a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Upload</a>
+            <a class="dropdown-item" href="{{ route('book.create') }}">Upload</a>
             <a class="dropdown-item" href="#">List all</a>
         </div>
 
