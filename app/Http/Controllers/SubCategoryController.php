@@ -13,7 +13,7 @@ class SubCategoryController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function store(REQUEST $request){
 
         $validatedData = $request->validate([
