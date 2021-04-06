@@ -7,11 +7,11 @@
         <a style="display: inline-block" class="nav-link dropdown" href="{{ route('category.index') }}">
             Categories
         </a>
-        <a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
+        {{-- <a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="{{ route('category.create') }}">Create</a>
             <a class="dropdown-item" href="{{ route('category.index') }}">List all</a>
-        </div>
+        </div> --}}
 
     </li>
     <!-- Dropdown -->
@@ -19,11 +19,11 @@
         <a style="display: inline-block" class="nav-link dropdown" href="#">
             Books
         </a>
-        <a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
+        <{{-- a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="{{ route('book.create') }}">Upload</a>
             <a class="dropdown-item" href="#">List all</a>
-        </div>
+        </div> --}}
 
     </li>
 
@@ -32,12 +32,12 @@
         <a style="display: inline-block" class="nav-link dropdown" href="#">
             Students
         </a>
-        <a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
+        {{-- <a style="display: inline-block" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Register</a>
             <a class="dropdown-item" href="#">List all</a>
         </div>
-
+ --}}
     </li>
 
 </ul>
