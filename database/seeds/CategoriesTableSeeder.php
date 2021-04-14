@@ -15,41 +15,25 @@ class CategoriesTableSeeder extends Seeder
     {
         Category::create([
             'id' => 1,
-            'name' => 'Teologia',
-            'description' => 'todos los libros de teologia',
-            'slug' => Str::slug('Teologia', '-'),
+            'name' => 'Certificado Básico en Teología',
+            'description' => 'Trayecto 1',
+            'slug' => Str::slug('Certificado Básico en Teología', '-'),
             'user_id' => '1',
         ]);
 
         Category::create([
             'id' => 2,
-            'name' => 'hermeneutica',
-            'description' => 'todos los libros de hermeneutica',
-            'slug' => Str::slug('hermeneutica', '-'),
+            'name' => 'Certificado Avanzado en Teología',
+            'description' => 'Trayecto 2',
+            'slug' => Str::slug('Certificado Avanzado en Teología', '-'),
             'user_id' => '1',
         ]);
 
         Category::create([
             'id' => 3,
-            'name' => 'bibliologia',
-            'description' => 'todos los libros de bibliologia',
-            'slug' => Str::slug('bibliologia', '-'),
-            'user_id' => '1',
-        ]);
-
-        Category::create([
-            'id' => 4,
-            'name' => 'homiletica',
-            'description' => 'todos los libros de homiletica',
-            'slug' => Str::slug('homiletica', '-'),
-            'user_id' => '1',
-        ]);
-
-        Category::create([
-            'id' => 5,
-            'name' => 'lectura',
-            'description' => 'todos los libros de lectura',
-            'slug' => Str::slug('lectura', '-'),
+            'name' => 'Licenciatura en Teología',
+            'description' => 'Trayecto 3',
+            'slug' => Str::slug('Licenciatura en Teología', '-'),
             'user_id' => '1',
         ]);
     }

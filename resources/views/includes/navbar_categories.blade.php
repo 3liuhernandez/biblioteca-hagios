@@ -14,48 +14,35 @@
     </div>
 </nav>  --}}
 
-<div class="d-flex flex-row flex-wrap bg-primary bg-dark sticky-top">
+<div class="d-flex flex-row w-100 bg-primary bg-dark sticky-top justify-content-between">
     <nav class="navbar navbar-expand-sm navbar-dark ">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">Categories :: </a>
+        <a class="navbar-brand" href="{{ route('category.index.guest') }}">Categories :: </a>
 
         <!-- Links -->
         <ul class="navbar-nav d-flex">
             @foreach($categories as $key)
-                <li class="nav-item">
-                    <a class="nav-link" href="#">{{ $key->name }}</a>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        {{ $key->name }}
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('category.show.guest', $key->id) }}">
+                            Todas
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        @foreach ($key->subcategories as $subcategory)
+                        <a class="dropdown-item" href="{{ route('category.show.guest', $subcategory->id) }}"> {{ $subcategory->name }} </a>
+                        @endforeach
+                    </div>
                 </li>
             @endforeach
-            {{--  <li class="nav-item">
-                <a class="nav-link" href="#">Add New</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link 2</a>
-            </li>
 
-            <!-- Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Dropdown link
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Link 1</a>
-                    <a class="dropdown-item" href="#">Link 2</a>
-                    <a class="dropdown-item" href="#">Link 3</a>
-                </div>
-            </li>  --}}
-
-            <form class="form-inline mr-auto" action="/action_page.php">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-            </form>
         </ul>
     </nav>
-    {{--  Horizontal List Groups
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item">First item</li>
-        <li class="list-group-item">Second item</li>
-        <li class="list-group-item">Third item</li>
-        <li class="list-group-item">Fourth item</li>
-    </ul>  --}}
+    <form class="form-inline mr-4" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+    </form>
 </div>

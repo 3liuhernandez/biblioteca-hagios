@@ -21,6 +21,19 @@ class CategoryController extends Controller
         return view('categories.index', compact('categories'));
     }
 
+    public function index_guest()
+    {
+        $categories  = Category::all()->load('subcategories');
+        return view('guest.categories.index', compact('categories'));
+    }
+
+    public function show_guest($category_id)
+    {
+        $category  = Category::all()->where('id', '=', $category_id)->load('subcategories');
+        $categories  = Category::all()->load('subcategories');
+        return view('guest.categories.show', compact('categories'), compact('category'));
+    }
+
     public function create()
     {
         return view('categories.create');

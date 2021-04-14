@@ -28,7 +28,7 @@
             <h1>@yield('title_section')</h1>
             {{--  <p>Resize this responsive page to see the effect!</p>  --}}
         </div>
-        <main class="py-6" id="contenet">
+        <main class="d-flex flex-row flex-wrap" id="contenet">
             @include('includes.navbar_categories')
             @yield('content')
         </main>

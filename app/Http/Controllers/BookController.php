@@ -36,11 +36,8 @@ class BookController extends Controller
 
         $book->slug = Str::slug($validatedData['name'], '-');
 
-        /* $path = $request->file('book')->store(
-            'books/'.$request->user()->id, 's3'
-        ); */
         $extension = $request->book->extension();
-        $filename = "book.".$extension;
+        $filename = $validatedData['name'].$extension;
         $path = $request->book->storeAs('books', $filename);
         /* dd($path); */
         $book->path = $path;
@@ -50,7 +47,7 @@ class BookController extends Controller
         $book->user_id = auth()->id();
         $book->save();
 
-        $status = "Book has been uploaded successfully";
+        $status = "Book: '". $filename."'. Has been uploaded successfully to subcategory ID: ".$validatedData['sub_category_id']."";
         return back()->with(compact('status'));
     }
 }

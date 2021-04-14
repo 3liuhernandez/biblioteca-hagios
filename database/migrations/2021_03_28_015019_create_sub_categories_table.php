@@ -16,10 +16,10 @@ class CreateSubCategoriesTable extends Migration
         Schema::create('sub_categories', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name')->unique();
+            $table->string('name');
             $table->text('description')->nullable();
 
-            $table->string('slug')->unique();
+            $table->string('slug');
 
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
@@ -28,6 +28,8 @@ class CreateSubCategoriesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
+
+            $table->unique(['name', 'category_id', 'slug']);
         });
     }
 

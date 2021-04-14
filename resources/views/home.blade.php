@@ -3,20 +3,16 @@
 @section('title_section', 'Home')
 
 @section('content')
-<div class="container" style="margin-top:30px">
-    <div class="row justify-content-center">
+<div class="container-fluid" style="margin-top:30px">
+    <div class="container d-flex justify-content-center">
         @if (session('status'))
             <div class="alert alert-success" role="alert">
                 {{ session('status') }}
             </div>
         @endif
 
-        <div class="col-md-3">
-            <h2>@yield('category_name')</h2>
-            @include('includes.navbar_sub_categories')
-            <hr class="d-md-none">
-        </div>
-        <div class="col-md-9">
+
+        <div class="col-md-12">
             <h2>TITLE HEADING</h2>
             <h5>Title description, Dec 7, 2017</h5>
             <div class="fakeimg">Fake Image</div>

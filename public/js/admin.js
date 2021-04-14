@@ -9,7 +9,7 @@ function openNav(sidenav_id, to_open, category_id = "", category_name = "") {
         /* sidenav.style.width = "500px"; */
         $('#'+sidenav_id).css('width', '500px');
     }else {
-        $('#'+sidenav_id).css('height', '500px');
+        $('#'+sidenav_id).css('height', '500px').css('bottom', '0');
     }
 
     if(category_id !== ""){
@@ -24,6 +24,6 @@ function closeNav(sidenav_id, to_open){
     if(to_open == "width"){
         $('#'+sidenav_id).css('width', '0');
     }else {
-        $('#'+sidenav_id).css('height', '0');
+        $('#'+sidenav_id).css('height', '0').css('bottom', '-10%');
     }
 }

@@ -51,7 +51,6 @@
             </ul>  --}}
         </div>
         <div class="d-flex flex-row flex-wrap m4 d-flex">
-
             @foreach($categories as $key )
                 @php $books_cat = 0; @endphp
 
@@ -60,15 +59,14 @@
                 @endforeach
 
                 <div class="card mt-4 ml-4">
-                    <img src="..." class="card-img-top" alt="...">
                     <div class="card-header">
                         <b class="card-title d-flex justify-content-between align-items-center">
-                            {{ $key->name }}
+                            {{ $key->name }} &nbsp;&nbsp;
                             <span class="badge badge-pill badge-dark small">
                                 {{ $books_cat }} Books
                             </span>
                         </b>
-                        <p class="card-text">{{ $key->description }}</p>
+                        <p class="card-text text-success">{{ $key->description }}</p>
                     </div>
                     <ul class="list-group list-group-flush sub_cat_list">
                         @foreach ($key->subcategories as $subcategory)
@@ -160,7 +158,7 @@
             <div class="card-body">
                 <div class="form-group row">
                     <div class="col-md-6">
-                        <input id="category_id" type="hidden" class="form-control @error('category_id') is-invalid @enderror" name="category_id" value="{{ $key->id }}" required autocomplete="category_id" autofocus>
+                        <input id="category_id" type="hidden" class="form-control @error('category_id') is-invalid @enderror" name="category_id" value="{{ old('category_id') }}" required autocomplete="category_id" autofocus>
 
                         @error('category_id')
                             <span class="invalid-feedback" role="alert">
@@ -216,16 +214,16 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav('upload_book_side', 'height')">&times;</a>
     <form action="{{ route('book.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="card">
+        <div class="card w-75 text-center m-auto">
             <div class="card-header">
-                Making a new Sub Categorie for: <b id="sidenav_category_name"></b>
+                Uploading a new Book for: <b id="sidenav_category_name" class="display-4"></b>
             </div>
             <div class="card-body">
                 <div class="form-group row">
                     <label for="sub_category_id" class="col-md-4 col-form-label text-md-right">{{ __('sub_category_id') }}</label>
 
                     <div class="col-md-6">
-                        <input id="sub_category_id" type="hidden" class="form-control @error('sub_category_id') is-invalid @enderror" name="sub_category_id" value="{{ __('1') }}" required autocomplete="sub_category_id" autofocus>
+                        <input id="category_id" type="hidden" class="form-control @error('sub_category_id') is-invalid @enderror" name="sub_category_id" value="{{ __('1') }}" required autocomplete="sub_category_id" autofocus>
 
                         @error('sub_category_id')
                             <span class="invalid-feedback" role="alert">

@@ -14,202 +14,122 @@ class SubCategoriesTableSeeder extends Seeder
     public function run()
     {
         /*
-         * TEOLOGIA
+         * Certificado Básico en Teología
          */
 
         SubCategory::create([
             'id' => 1,
-            'name' => 'Teologia 1',
-            'description' => 'todos los libros de teologia 1',
-            'slug' => Str::slug('Teologia 1', '-'),
+            'name' => 'Trimestre 1',
+            'description' => 'Introducción a la Biblia, Introducción a la Filosofía, Lenguaje y Comunicación 1, Métodos de Investigación Virtual, Inducción al Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 1', '-'),
             'category_id' => 1,
             'user_id' => '1',
         ]);
 
         SubCategory::create([
             'id' => 2,
-            'name' => 'Teologia 2',
-            'description' => 'todos los libros de teologia 2',
-            'slug' => Str::slug('Teologia 2', '-'),
+            'name' => 'Trimestre 2',
+            'description' => 'Introducción al Antiguo Testamento, Historia del Cristianismo 1, Lenguaje y Comunicación 2, Métodos de Investigación 1, Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 2', '-'),
             'category_id' => 1,
             'user_id' => '1',
         ]);
 
         SubCategory::create([
             'id' => 3,
-            'name' => 'Teologia 3',
-            'description' => 'todos los libros de teologia 3',
-            'slug' => Str::slug('Teologia 3', '-'),
+            'name' => 'Trimestre 3',
+            'description' => 'Introducción al Nuevo Testamento, Historia del Cristianismo 2, Nociones de la ética, Oratoria Sagrada 1, 	Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 3', '-'),
             'category_id' => 1,
             'user_id' => '1',
         ]);
 
         SubCategory::create([
             'id' => 4,
-            'name' => 'Teologia 4',
-            'description' => 'todos los libros de teologia 4',
-            'slug' => Str::slug('Teologia 4', '-'),
+            'name' => 'Trimestre 4',
+            'description' => 'Hermenéutica Bíblica, Teología Sistemática 1, Gerencia Cristiana, Introducción a la Pedagogía, Jornada de Desarrollo Espiritual 1, Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 4', '-'),
             'category_id' => 1,
             'user_id' => '1',
         ]);
 
         /*
-         * HERMENEUTICA
+         * Certificado Avanzado en Teología
          */
 
         SubCategory::create([
             'id' => 5,
-            'name' => 'hermeneutica 1',
-            'description' => 'todos los libros de hermeneutica 1',
-            'slug' => Str::slug('hermeneutica 1', '-'),
+            'name' => 'Trimestre 1',
+            'description' => 'Pentateuco, Filosofía de la religión, Teología sistemática 2, Gerencia eclesiástica, Elaboración de Anteproyecto de Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 1', '-'),
             'category_id' => 2,
             'user_id' => '1',
         ]);
 
         SubCategory::create([
             'id' => 6,
-            'name' => 'hermeneutica 2',
-            'description' => 'todos los libros de hermeneutica 2',
-            'slug' => Str::slug('hermeneutica 2', '-'),
+            'name' => 'Trimestre 2',
+            'description' => 'Libros Históricos, Teología de la Adoración, Gerencia y Ministerio, Metodología Teológica, Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 2', '-'),
             'category_id' => 2,
             'user_id' => '1',
         ]);
 
         SubCategory::create([
             'id' => 7,
-            'name' => 'hermeneutica 3',
-            'description' => 'todos los libros de hermeneutica 3',
-            'slug' => Str::slug('hermeneutica 3', '-'),
+            'name' => 'Trimestre 3',
+            'description' => 'Estudios de los Evangelios, Teología del Antiguo Testamento, Psicología y Ministerio, Métodos de investigación, Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 3', '-'),
             'category_id' => 2,
             'user_id' => '1',
         ]);
 
         SubCategory::create([
             'id' => 8,
-            'name' => 'hermeneutica 4',
-            'description' => 'todos los libros de hermeneutica 4',
-            'slug' => Str::slug('hermeneutica 4', '-'),
+            'name' => 'Trimestre 4',
+            'description' => 'Hechos de los Apóstoles, Electiva 1, Teología de las Misiones, Evangelización, Jornada de Desarrollo Espiritual 2, Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 4', '-'),
             'category_id' => 2,
             'user_id' => '1',
         ]);
 
         /*
-         * BIBLIOLOGIA
+         * Licenciatura en Teología
          */
 
         SubCategory::create([
             'id' => 9,
-            'name' => 'bibliologia 1',
-            'description' => 'todos los libros de bibliologia 1',
-            'slug' => Str::slug('bibliologia 1', '-'),
+            'name' => 'Trimestre 1',
+            'description' => 'Libros Sapienciales, Teología del Nuevo Testamento, Electiva 2, Derecho Aplicado, Seminario de Investigación, Ejecución del Proyecto de Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 1', '-'),
             'category_id' => 3,
             'user_id' => '1',
         ]);
 
         SubCategory::create([
             'id' => 10,
-            'name' => 'bibliologia 2',
-            'description' => 'todos los libros de bibliologia 2',
-            'slug' => Str::slug('bibliologia 2', '-'),
+            'name' => 'Trimestre 2',
+            'description' => 'Libros Proféticos, Teologías Contemporáneas, Planificación Estratégica, Metodología Teológica, Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 2', '-'),
             'category_id' => 3,
             'user_id' => '1',
         ]);
 
         SubCategory::create([
             'id' => 11,
-            'name' => 'bibliologia 3',
-            'description' => 'todos los libros de bibliologia 3',
-            'slug' => Str::slug('bibliologia 3', '-'),
+            'name' => 'Trimestre 3',
+            'description' => 'Epístolas, Teología de la Esperanza, Electiva 3, Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 3', '-'),
             'category_id' => 3,
             'user_id' => '1',
         ]);
 
         SubCategory::create([
             'id' => 12,
-            'name' => 'bibliologia 4',
-            'description' => 'todos los libros de bibliologia 4',
-            'slug' => Str::slug('bibliologia 4', '-'),
+            'name' => 'Trimestre 4',
+            'description' => 'Apocalipsis, Trabajo Especial de Grado, Jornada de Desarrollo Espiritual 3, Servicio Comunitario',
+            'slug' => Str::slug('Trimestre 4', '-'),
             'category_id' => 3,
-            'user_id' => '1',
-        ]);
-
-        /*
-         * BIBLIOLOGIA
-         */
-
-        SubCategory::create([
-            'id' => 13,
-            'name' => 'homiletica 1',
-            'description' => 'todos los libros de homiletica 1',
-            'slug' => Str::slug('homiletica 1', '-'),
-            'category_id' => 4,
-            'user_id' => '1',
-        ]);
-
-        SubCategory::create([
-            'id' => 14,
-            'name' => 'homiletica 2',
-            'description' => 'todos los libros de homiletica 2',
-            'slug' => Str::slug('homiletica 2', '-'),
-            'category_id' => 4,
-            'user_id' => '1',
-        ]);
-
-        SubCategory::create([
-            'id' => 15,
-            'name' => 'homiletica 3',
-            'description' => 'todos los libros de homiletica 3',
-            'slug' => Str::slug('homiletica 3', '-'),
-            'category_id' => 4,
-            'user_id' => '1',
-        ]);
-
-        SubCategory::create([
-            'id' => 16,
-            'name' => 'homiletica 4',
-            'description' => 'todos los libros de homiletica 4',
-            'slug' => Str::slug('homiletica 4', '-'),
-            'category_id' => 4,
-            'user_id' => '1',
-        ]);
-
-        /*
-         * LECTURA
-         */
-
-        SubCategory::create([
-            'id' => 17,
-            'name' => 'lectura 1',
-            'description' => 'todos los libros de lectura 1',
-            'slug' => Str::slug('lectura 1', '-'),
-            'category_id' => 5,
-            'user_id' => '1',
-        ]);
-
-        SubCategory::create([
-            'id' => 18,
-            'name' => 'lectura 2',
-            'description' => 'todos los libros de lectura 2',
-            'slug' => Str::slug('lectura 2', '-'),
-            'category_id' => 5,
-            'user_id' => '1',
-        ]);
-
-        SubCategory::create([
-            'id' => 19,
-            'name' => 'lectura 3',
-            'description' => 'todos los libros de lectura 3',
-            'slug' => Str::slug('lectura 3', '-'),
-            'category_id' => 5,
-            'user_id' => '1',
-        ]);
-
-        SubCategory::create([
-            'id' => 20,
-            'name' => 'lectura 4',
-            'description' => 'todos los libros de lectura 4',
-            'slug' => Str::slug('lectura 4', '-'),
-            'category_id' => 5,
             'user_id' => '1',
         ]);
     }

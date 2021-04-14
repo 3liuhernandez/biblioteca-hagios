@@ -17,6 +17,8 @@ Route::get('/', 'GuestController@index');
 Auth::routes();
 
 Route::get('/home', 'GuestController@index')->name('home');
+Route::get('/categories', 'CategoryController@index_guest')->name('category.index.guest');
+Route::get('/category/{id}', 'CategoryController@show_guest')->name('category.show.guest');
 
 
 
