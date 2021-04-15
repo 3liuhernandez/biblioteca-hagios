@@ -14,7 +14,7 @@ class GuestController extends Controller
 
     public function index()
     {
-        $categories = Category::all();
+        $categories  = Category::all()->load('subcategories');
         $role = auth()->user()->role;
         if($role > 0) {
             return view('home', compact('categories'));

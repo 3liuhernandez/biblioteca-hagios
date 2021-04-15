@@ -17,8 +17,13 @@ Route::get('/', 'GuestController@index');
 Auth::routes();
 
 Route::get('/home', 'GuestController@index')->name('home');
+
 Route::get('/categories', 'CategoryController@index_guest')->name('category.index.guest');
 Route::get('/category/{id}', 'CategoryController@show_guest')->name('category.show.guest');
+
+Route::get('/sub_categories', 'CategoryController@index_guest')->name('sub_category.index.guest');
+Route::get('/sub_category/{id}', 'SubCategoryController@show_guest')->name('sub_category.show.guest');
+
 
 
 

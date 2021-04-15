@@ -14,6 +14,20 @@ class SubCategoryController extends Controller
         $this->middleware('auth');
     }
 
+    public function index_guest()
+    {
+        $sub_categories  = SubCategory::all()->load('subcategories');
+        return view('guest.categories.index', compact('sub_categories'));
+    }
+
+    public function show_guest($category_id)
+    {
+        $sub_categories  = SubCategory::all()->where('id', '=', $category_id)->load('subcategories');
+        $categories  = SubCategory::all()->load('subcategories');
+        return view('guest.categories.show', compact('categories'), compact('sub_categories'));
+    }
+
+
     public function store(REQUEST $request){
 
         $validatedData = $request->validate([

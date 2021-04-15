@@ -17,39 +17,47 @@
                 {{ session('status') }}
             </div>
         @endif
-        <div class="col-md-2">
-            <ul class="nav bg-light d-flex flex-column sub_categories">
+
+        <div class="col-md-2 card m-0 p-0 ml-4 flex-column">
+            <div class="card-header">
+                <strong> Sub Categorias </strong>
+            </div>
+            <ul class="list-group list-group-flush d-flex flex-column flex-wrap">
                 @foreach($category as $key )
-                    <strong> {{ $key->name }} </strong>
                     @foreach ($key->subcategories as $subcategory)
-                        <li class="nav-item">
-                            <a href="#" class="nav-link m-1"> {{ $subcategory->name }} </a>
-                        </li>
+                        <a href="{{ route('sub_category.show.guest', $subcategory->id)}}" class="list-group-item list-group-item-action">
+                            <b>{{ $subcategory->name }}</b>
+                        </a>
                     @endforeach
                 @endforeach
             </ul>
         </div>
-        <div class="col-md-10">
-            <div class="d-flex flex-row flex-wrap m4 d-flex flex-column">
+        <div class="col-md-9 ml-4">
+            <div class="d-flex flex-column">
                 @foreach($category as $key )
-    
-                    <div class="card m-4">
-                        <div class="card-header">
-                            <a href="{{ route('category.show.guest', $key->id) }}">
-                                <b class="card-title d-flex justify-content-between align-items-center">
-                                    {{ $key->name }}
-                                </b>
-                            </a>
-                            <p class="card-text text-success">{{ $key->description }}</p>
-                        </div>
-                        <div class="card-body">
-                            <div class="list-group list-group-horizontal">
-                                @foreach ($key->subcategories as $subcategory)
-                                <a href="#" class="list-group-item list-group-item-action"> {{ $subcategory->name }} </a>
+                    @foreach ($key->subcategories as $subcategory)
+                        @if( count($subcategory->books) > 0)
+                        <div class="card d-flex flex-column mb-4">
+                            <p class="card-title display-4 p-4"> {{ $key->name }}</p>
+                            <div class="card-body d-flex flex-wrap">
+                                @foreach($subcategory->books as $book)
+                                <div class="col-md-2 mb-4 mr-2 d-flex align-self-stretch">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <img src="{{ asset('img/books/') }}">
+                                        </div>
+                                        <div class="card-body d-flex flex-column justify-content-between">
+                                            <h5 class="card-title">{{$book->name}}</h5>
+                                            <p class="card-text">{{$book->description}}</p>
+                                            <a href="#" class="text-primart p-2">download</a>
+                                        </div>
+                                    </div>
+                                </div>
                                 @endforeach
                             </div>
                         </div>
-                    </div>
+                        @endif
+                    @endforeach
                 @endforeach
             </div>
         </div>
